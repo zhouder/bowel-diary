@@ -1,0 +1,7 @@
+.section:first-child {
+  background: linear-gradient(135deg, #fffdf8 0%, #e5edf6 100%);
+}
+
+.textarea.small {
+  min-height: 112rpx;
+}
