@@ -1,0 +1,147 @@
+.hero {
+  margin-bottom: 24rpx;
+  padding: 34rpx 30rpx;
+  border-radius: 18rpx;
+  background: linear-gradient(135deg, #fffdf8 0%, #e4f2eb 100%);
+  border: 1rpx solid #ded8cd;
+}
+
+.hero-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16rpx;
+  margin-top: 28rpx;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.stat-card {
+  min-height: 186rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24rpx;
+  border: 1rpx solid #ded8cd;
+  border-radius: 16rpx;
+  background: #fffdf8;
+}
+
+.stat-value {
+  color: #111111;
+  font-size: 40rpx;
+  font-weight: 850;
+  line-height: 1.1;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16rpx;
+  margin-bottom: 22rpx;
+}
+
+.mini-btn {
+  min-width: 112rpx;
+  min-height: 60rpx;
+  padding: 0 18rpx;
+  border: 1rpx solid #ded8cd;
+  background: #ffffff;
+  color: #22211f;
+  font-size: 26rpx;
+  font-weight: 750;
+}
+
+.rhythm-scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.rhythm-row {
+  display: flex;
+  gap: 14rpx;
+}
+
+.rhythm-day {
+  width: 158rpx;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10rpx;
+  align-items: center;
+  padding: 16rpx;
+  border: 1rpx solid #ded8cd;
+  border-radius: 14rpx;
+  background: #ffffff;
+}
+
+.day-label {
+  color: #22211f;
+  font-size: 28rpx;
+  font-weight: 750;
+}
+
+.bar-track {
+  width: 116rpx;
+  height: 142rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8rpx;
+  padding: 12rpx;
+  border-radius: 14rpx;
+  background: #f3efe7;
+}
+
+.bar {
+  width: 18rpx;
+  min-height: 8rpx;
+  border-radius: 10rpx 10rpx 4rpx 4rpx;
+}
+
+.bar.bowel {
+  background: #c85f4c;
+}
+
+.bar.water {
+  background: #426f9f;
+}
+
+.bar.fiber {
+  background: #4f9a78;
+}
+
+.log-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee8dc;
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-main {
+  margin-bottom: 10rpx;
+}
+
+.log-title {
+  color: #111111;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.log-note {
+  color: #3f3728;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14rpx;
+}
