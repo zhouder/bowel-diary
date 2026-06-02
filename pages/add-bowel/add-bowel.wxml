@@ -1,0 +1,59 @@
+<view class="page">
+  <view class="section">
+    <text class="eyebrow">BOWEL</text>
+    <view class="title">记录排便</view>
+  </view>
+
+  <view class="section">
+    <view class="two-col">
+      <view class="field">
+        <text class="label">日期</text>
+        <picker mode="date" value="{{form.date}}" bindchange="onDateChange">
+          <view class="picker-value">{{form.date}}</view>
+        </picker>
+      </view>
+      <view class="field">
+        <text class="label">时间</text>
+        <picker mode="time" value="{{form.time}}" bindchange="onTimeChange">
+          <view class="picker-value">{{form.time}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="field">
+      <text class="label">Bristol 形态</text>
+      <picker mode="selector" range="{{bristolOptions}}" range-key="label" value="{{form.bristolIndex}}" bindchange="onBristolChange">
+        <view class="picker-value">{{form.bristolLabel}}</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">顺畅度</text>
+      <picker mode="selector" range="{{easeOptions}}" range-key="label" value="{{form.easeIndex}}" bindchange="onEaseChange">
+        <view class="picker-value">{{form.easeLabel}}</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">用时（分钟）</text>
+      <input class="input" type="number" value="{{form.minutes}}" bindinput="onMinutesInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">不适</text>
+      <view class="chip-row">
+        <view class="chip {{form.straining ? 'active' : ''}}" data-key="straining" bindtap="toggleFlag">费力</view>
+        <view class="chip {{form.pain ? 'active' : ''}}" data-key="pain" bindtap="toggleFlag">疼痛</view>
+        <view class="chip {{form.bloating ? 'active' : ''}}" data-key="bloating" bindtap="toggleFlag">腹胀</view>
+        <view class="chip {{form.incomplete ? 'active' : ''}}" data-key="incomplete" bindtap="toggleFlag">未尽感</view>
+      </view>
+    </view>
+
+    <view class="field">
+      <text class="label">备注</text>
+      <textarea class="textarea" value="{{form.notes}}" placeholder="比如早起、饭后、外出、压力等" bindinput="onNotesInput" />
+    </view>
+
+    <button class="primary-btn" bindtap="save">保存排便</button>
+  </view>
+</view>
