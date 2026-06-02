@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="section ai-hero">
+    <text class="eyebrow">AI PLAN</text>
+    <view class="title">饮食建议</view>
+    <view class="muted">根据最近 21 天排便和饮食记录生成建议。</view>
+  </view>
+
+  <view class="section">
+    <view class="context-row">
+      <view class="context-pill">{{contextCount.bowels}} 条排便</view>
+      <view class="context-pill">{{contextCount.meals}} 条饮食</view>
+      <view class="context-pill">近 21 天</view>
+    </view>
+
+    <button class="primary-btn" disabled="{{loading}}" bindtap="generate">{{loading ? '生成中' : '生成建议'}}</button>
+    <button wx:if="{{!hasSettings}}" class="secondary-btn setting-btn" bindtap="goSettings">先去设置 API</button>
+
+    <view wx:if="{{error}}" class="error-box">{{error}}</view>
+
+    <view wx:if="{{answer}}" class="answer-box">
+      <text user-select>{{answer}}</text>
+    </view>
+
+    <view wx:if="{{!answer && !error}}" class="empty">
+      AI 会重点看饮水、纤维、蔬果、油炸辛辣、咖啡因、乳制品、排便间隔和 Bristol 形态。
+    </view>
+  </view>
+
+  <view class="health-note">
+    AI 只做生活方式建议，不诊断疾病，不开药，不替代医生。
+  </view>
+</view>
