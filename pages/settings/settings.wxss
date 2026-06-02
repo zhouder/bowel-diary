@@ -1,0 +1,24 @@
+.settings-hero {
+  background: linear-gradient(135deg, #fffdf8 0%, #e4f2eb 100%);
+}
+
+.first-field {
+  margin-top: 22rpx;
+}
+
+.secret-row {
+  display: grid;
+  grid-template-columns: 1fr 96rpx;
+  gap: 12rpx;
+}
+
+.eye-btn {
+  min-height: 84rpx;
+  padding: 0;
+}
+
+.data-actions {
+  display: grid;
+  gap: 14rpx;
+  margin-top: 22rpx;
+}
