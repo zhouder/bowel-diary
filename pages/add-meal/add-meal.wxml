@@ -1,0 +1,64 @@
+<view class="page">
+  <view class="section">
+    <text class="eyebrow">MEAL</text>
+    <view class="title">记录饮食</view>
+  </view>
+
+  <view class="section">
+    <view class="two-col">
+      <view class="field">
+        <text class="label">日期</text>
+        <picker mode="date" value="{{form.date}}" bindchange="onDateChange">
+          <view class="picker-value">{{form.date}}</view>
+        </picker>
+      </view>
+      <view class="field">
+        <text class="label">时间</text>
+        <picker mode="time" value="{{form.time}}" bindchange="onTimeChange">
+          <view class="picker-value">{{form.time}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="field">
+      <text class="label">餐次</text>
+      <picker mode="selector" range="{{mealOptions}}" range-key="label" value="{{form.mealIndex}}" bindchange="onMealChange">
+        <view class="picker-value">{{form.mealLabel}}</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">食物</text>
+      <textarea class="textarea" value="{{form.foods}}" placeholder="比如燕麦、酸奶、苹果、米饭、青菜" bindinput="onFoodsInput" />
+    </view>
+
+    <view class="two-col">
+      <view class="field">
+        <text class="label">饮水（ml）</text>
+        <input class="input" type="number" value="{{form.waterMl}}" bindinput="onWaterInput" />
+      </view>
+      <view class="field">
+        <text class="label">纤维估算（g）</text>
+        <input class="input" type="digit" value="{{form.fiberGram}}" bindinput="onFiberInput" />
+      </view>
+    </view>
+
+    <view class="field">
+      <text class="label">标签</text>
+      <view class="chip-row">
+        <view class="chip {{form.fruitVeg ? 'active' : ''}}" data-key="fruitVeg" bindtap="toggleFlag">蔬果</view>
+        <view class="chip {{form.caffeine ? 'active' : ''}}" data-key="caffeine" bindtap="toggleFlag">咖啡因</view>
+        <view class="chip {{form.dairy ? 'active' : ''}}" data-key="dairy" bindtap="toggleFlag">乳制品</view>
+        <view class="chip {{form.spicy ? 'active' : ''}}" data-key="spicy" bindtap="toggleFlag">辛辣</view>
+        <view class="chip {{form.fried ? 'active' : ''}}" data-key="fried" bindtap="toggleFlag">油炸</view>
+      </view>
+    </view>
+
+    <view class="field">
+      <text class="label">备注</text>
+      <textarea class="textarea small" value="{{form.notes}}" placeholder="比如吃得晚、压力大、运动少" bindinput="onNotesInput" />
+    </view>
+
+    <button class="primary-btn" bindtap="save">保存饮食</button>
+  </view>
+</view>
