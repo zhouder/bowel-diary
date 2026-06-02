@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/dashboard/dashboard",
+    "pages/add-bowel/add-bowel",
+    "pages/add-meal/add-meal",
+    "pages/records/records",
+    "pages/ai/ai",
+    "pages/settings/settings"
+  ],
+  "window": {
+    "navigationBarTitleText": "LLW 便便日记",
+    "navigationBarBackgroundColor": "#4f9a78",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f5ef",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
