@@ -1,0 +1,99 @@
+<view class="page">
+  <view class="hero">
+    <view>
+      <text class="eyebrow">LLW CARE LOG</text>
+      <view class="title">饮食和排便记录</view>
+      <view class="muted">本地记录，AI 只在你点击生成时读取最近数据。</view>
+    </view>
+    <view class="hero-actions">
+      <button class="primary-btn" bindtap="goAddBowel">记排便</button>
+      <button class="secondary-btn" bindtap="goAddMeal">记饮食</button>
+    </view>
+  </view>
+
+  <view class="stats-grid">
+    <view class="stat-card">
+      <text class="muted">上次排便</text>
+      <view class="stat-value">{{stats.daysSinceLastText}}</view>
+      <text class="muted">{{stats.lastBowelText}}</text>
+    </view>
+    <view class="stat-card">
+      <text class="muted">7 天次数</text>
+      <view class="stat-value">{{stats.last7BowelCount}} 次</view>
+      <text class="muted">每周节律</text>
+    </view>
+    <view class="stat-card">
+      <text class="muted">14 天形态</text>
+      <view class="stat-value">{{stats.avgBristolText}}</view>
+      <text class="muted">偏硬占比 {{stats.hardRateText}}</text>
+    </view>
+    <view class="stat-card">
+      <text class="muted">日均饮水</text>
+      <view class="stat-value">{{stats.avgWaterText}}</view>
+      <text class="muted">日均纤维 {{stats.avgFiberText}}</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <view>
+        <text class="eyebrow">7 DAYS</text>
+        <view class="section-title">本周节律</view>
+      </view>
+      <button class="mini-btn" bindtap="goRecords">全部</button>
+    </view>
+
+    <scroll-view class="rhythm-scroll" scroll-x>
+      <view class="rhythm-row">
+        <view class="rhythm-day" wx:for="{{stats.dailyRows}}" wx:key="key">
+          <view class="day-label">{{item.label}}</view>
+          <view class="bar-track">
+            <view class="bar bowel" style="height: {{item.bowelHeight}}%;"></view>
+            <view class="bar water" style="height: {{item.waterHeight}}%;"></view>
+            <view class="bar fiber" style="height: {{item.fiberHeight}}%;"></view>
+          </view>
+          <view class="muted">{{item.bowelCount}} 次</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <view>
+        <text class="eyebrow">RECENT</text>
+        <view class="section-title">最近排便</view>
+      </view>
+      <button class="mini-btn" bindtap="goAi">AI</button>
+    </view>
+
+    <view wx:if="{{stats.recentBowels.length}}">
+      <view class="log-item" wx:for="{{stats.recentBowels}}" wx:key="id">
+        <view class="log-main">
+          <view class="log-title">{{item.bristolText}}</view>
+          <view class="muted">{{item.timeText}} · {{item.minutes}} 分钟 · 顺畅度 {{item.ease}}</view>
+        </view>
+        <view class="log-note">{{item.detailText}}</view>
+      </view>
+    </view>
+    <view wx:else class="empty">暂无排便记录</view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <view>
+        <text class="eyebrow">TOOLS</text>
+        <view class="section-title">常用</view>
+      </view>
+    </view>
+    <view class="tool-grid">
+      <button class="secondary-btn" bindtap="goRecords">记录列表</button>
+      <button class="secondary-btn" bindtap="goAi">AI 建议</button>
+      <button class="secondary-btn" bindtap="goSettings">设置</button>
+    </view>
+  </view>
+
+  <view class="health-note">
+    如出现便血、持续腹痛、呕吐、发热、体重明显下降，或自我调整后仍长期便秘，优先咨询医生。
+  </view>
+</view>
