@@ -1,0 +1,13 @@
+# WeChat developer tool private config
+project.private.config.json
+
+# Build and dependency outputs
+miniprogram_npm/
+node_modules/
+dist/
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+*.log
