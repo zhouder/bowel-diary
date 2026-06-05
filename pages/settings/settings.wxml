@@ -1,8 +1,7 @@
 <view class="page settings-page">
-  <view class="settings-hero">
-    <text class="settings-kicker">Xiaomi MiMo</text>
-    <view class="settings-title">Token Plan</view>
-    <view class="settings-subtitle">OpenAI-compatible · China endpoint</view>
+  <view class="page-heading">
+    <view class="page-title">设置</view>
+    <view class="page-subtitle">Xiaomi MiMo Token Plan</view>
   </view>
 
   <view class="section">

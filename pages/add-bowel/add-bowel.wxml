@@ -1,8 +1,7 @@
 <view class="page entry-page">
-  <view class="entry-hero bowel-hero">
-    <text class="entry-kicker">BOWEL LOG</text>
-    <view class="entry-title">记录排便</view>
-    <view class="entry-subtitle">形态、顺畅度与不适感</view>
+  <view class="page-heading">
+    <view class="page-title">记录排便</view>
+    <view class="page-subtitle">形态、顺畅度与不适感</view>
   </view>
 
   <view class="section form-section">

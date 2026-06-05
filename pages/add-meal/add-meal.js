@@ -104,6 +104,8 @@ Page({
     }))
 
     wx.showToast({ title: '已保存', icon: 'success' })
-    this.setData({ form: defaultForm() })
+    setTimeout(() => {
+      wx.reLaunch({ url: '/pages/dashboard/dashboard' })
+    }, 450)
   },
 })

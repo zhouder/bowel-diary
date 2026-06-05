@@ -2,30 +2,8 @@
   padding-top: 24rpx;
 }
 
-.settings-hero {
-  margin-bottom: 24rpx;
-  padding: 22rpx 0 0;
-}
-
-.settings-kicker {
-  color: #86868b;
-  font-size: 24rpx;
-  font-weight: 650;
-}
-
-.settings-title {
-  margin-top: 8rpx;
-  color: #1d1d1f;
-  font-size: 60rpx;
-  font-weight: 850;
-  line-height: 1.05;
-}
-
-.settings-subtitle {
-  margin-top: 10rpx;
-  color: #6e6e73;
-  font-size: 28rpx;
-  line-height: 1.42;
+.settings-page .section {
+  padding: 24rpx 26rpx 28rpx;
 }
 
 .section-line {
@@ -33,25 +11,26 @@
   align-items: center;
   justify-content: space-between;
   gap: 18rpx;
+  margin-bottom: 22rpx;
 }
 
 .mini-btn {
-  width: 128rpx;
-  height: 64rpx;
-  min-height: 64rpx;
-  flex: 0 0 128rpx;
+  width: 104rpx;
+  height: 56rpx;
+  min-height: 56rpx;
+  flex: 0 0 104rpx;
   padding: 0;
-  border-radius: 18rpx;
+  border-radius: 16rpx;
   background: #f2f2f7;
   color: #007aff;
-  font-size: 26rpx;
-  font-weight: 750;
-  line-height: 64rpx;
+  font-size: 25rpx;
+  font-weight: 600;
+  line-height: 56rpx;
   text-align: center;
 }
 
 .first-field {
-  margin-top: 24rpx;
+  margin-top: 0;
 }
 
 .secret-row {
@@ -67,16 +46,16 @@
 }
 
 .eye-btn {
-  width: 96rpx;
-  height: 92rpx;
-  min-height: 92rpx;
-  flex: 0 0 96rpx;
+  width: 88rpx;
+  height: 88rpx;
+  min-height: 88rpx;
+  flex: 0 0 88rpx;
   padding: 0;
-  line-height: 92rpx;
+  line-height: 88rpx;
 }
 
 .data-actions {
   display: grid;
-  gap: 14rpx;
-  margin-top: 22rpx;
+  gap: 12rpx;
+  margin-top: 20rpx;
 }

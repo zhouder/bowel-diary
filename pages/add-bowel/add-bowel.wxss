@@ -2,34 +2,8 @@
   padding-top: 24rpx;
 }
 
-.entry-hero {
-  margin-bottom: 24rpx;
-  padding: 22rpx 0 0;
-}
-
-.entry-kicker {
-  color: #86868b;
-  font-size: 24rpx;
-  font-weight: 650;
-}
-
-.entry-title {
-  margin-top: 8rpx;
-  color: #1d1d1f;
-  font-size: 60rpx;
-  font-weight: 850;
-  line-height: 1.05;
-}
-
-.entry-subtitle {
-  margin-top: 10rpx;
-  color: #6e6e73;
-  font-size: 28rpx;
-  line-height: 1.42;
-}
-
 .form-section {
-  padding-bottom: 32rpx;
+  padding: 24rpx 26rpx 28rpx;
 }
 
 .save-btn {

@@ -1,8 +1,7 @@
 <view class="page entry-page">
-  <view class="entry-hero meal-hero">
-    <text class="entry-kicker">MEAL LOG</text>
-    <view class="entry-title">记录饮食</view>
-    <view class="entry-subtitle">水分、纤维与餐食标签</view>
+  <view class="page-heading">
+    <view class="page-title">记录饮食</view>
+    <view class="page-subtitle">水分、纤维与餐食标签</view>
   </view>
 
   <view class="section form-section">

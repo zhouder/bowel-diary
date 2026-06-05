@@ -1,8 +1,7 @@
 <view class="page ai-page">
-  <view class="ai-hero">
-    <text class="ai-kicker">Xiaomi MiMo</text>
-    <view class="ai-title">饮食建议</view>
-    <view class="ai-subtitle">Token Plan · mimo-v2.5</view>
+  <view class="page-heading">
+    <view class="page-title">饮食建议</view>
+    <view class="page-subtitle">Xiaomi MiMo · Token Plan</view>
   </view>
 
   <view class="section">

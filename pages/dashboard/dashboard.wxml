@@ -1,39 +1,43 @@
 <view class="page dashboard-page">
-  <view class="hero">
-    <view class="hero-top">
+  <view class="page-heading">
+    <view class="page-title">今天</view>
+    <view class="page-subtitle">LLW 的饮食与排便记录</view>
+  </view>
+
+  <view class="quick-actions">
+    <view class="action-row" bindtap="goAddBowel">
       <view>
-        <text class="hero-kicker">LLW Rhythm</text>
-        <view class="hero-title">今天</view>
-        <view class="hero-subtitle">饮食、排便与身体节律</view>
+        <view class="action-title">记录排便</view>
+        <view class="muted">{{stats.lastBowelText}}</view>
       </view>
-      <view class="hero-orbit">
-        <view class="orbit-value">{{stats.last7BowelCount}}</view>
-        <view class="orbit-label">7D</view>
-      </view>
+      <text class="chevron">›</text>
     </view>
-    <view class="hero-actions">
-      <view class="primary-btn" bindtap="goAddBowel">记排便</view>
-      <view class="secondary-btn" bindtap="goAddMeal">记饮食</view>
+    <view class="action-row" bindtap="goAddMeal">
+      <view>
+        <view class="action-title">记录饮食</view>
+        <view class="muted">水分、纤维和餐食</view>
+      </view>
+      <text class="chevron">›</text>
     </view>
   </view>
 
   <view class="stats-grid">
-    <view class="stat-card accent-green">
+    <view class="stat-card">
       <text class="stat-label">上次排便</text>
       <view class="stat-value">{{stats.daysSinceLastText}}</view>
       <text class="stat-foot">{{stats.lastBowelText}}</text>
     </view>
-    <view class="stat-card accent-blue">
+    <view class="stat-card">
       <text class="stat-label">7 天次数</text>
       <view class="stat-value">{{stats.last7BowelCount}} 次</view>
       <text class="stat-foot">每周节律</text>
     </view>
-    <view class="stat-card accent-coral">
+    <view class="stat-card">
       <text class="stat-label">14 天形态</text>
       <view class="stat-value">{{stats.avgBristolText}}</view>
       <text class="stat-foot">偏硬 {{stats.hardRateText}}</text>
     </view>
-    <view class="stat-card accent-ink">
+    <view class="stat-card">
       <text class="stat-label">日均饮水</text>
       <view class="stat-value">{{stats.avgWaterText}}</view>
       <text class="stat-foot">纤维 {{stats.avgFiberText}}</text>
@@ -43,10 +47,10 @@
   <view class="section rhythm-section">
     <view class="section-head">
       <view>
-        <text class="eyebrow">SEVEN DAYS</text>
-        <view class="section-title">节律视图</view>
+        <view class="section-title">本周</view>
+        <view class="muted">排便、水分和纤维节律</view>
       </view>
-      <view class="mini-btn" bindtap="goRecords">全部</view>
+      <view class="mini-btn" bindtap="goRecords">查看</view>
     </view>
 
     <view class="rhythm-row">
@@ -64,10 +68,7 @@
 
   <view class="section">
     <view class="section-head">
-      <view>
-        <text class="eyebrow">RECENT</text>
-        <view class="section-title">最近排便</view>
-      </view>
+      <view class="section-title">最近排便</view>
       <view class="mini-btn" bindtap="goAi">AI</view>
     </view>
 
@@ -85,10 +86,7 @@
 
   <view class="section">
     <view class="section-head">
-      <view>
-        <text class="eyebrow">TOOLS</text>
-        <view class="section-title">快速入口</view>
-      </view>
+      <view class="section-title">更多</view>
     </view>
     <view class="tool-list">
       <view class="tool-row" bindtap="goRecords">
