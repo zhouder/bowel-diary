@@ -23,7 +23,8 @@
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": true
+    "useApiHostProcess": true,
+    "minifyWXML": true
   },
   "compileType": "miniprogram",
   "libVersion": "3.8.12",
