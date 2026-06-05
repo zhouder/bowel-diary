@@ -1,11 +1,23 @@
-const { exportDataWithoutKey, loadData, normalizeData, saveData, updateData } = require('../../utils/storage')
+const {
+  DEFAULT_AI_ENDPOINT,
+  DEFAULT_AI_MODEL,
+  exportDataWithoutKey,
+  loadData,
+  normalizeData,
+  saveData,
+  updateData,
+} = require('../../utils/storage')
 
 Page({
   data: {
     settings: {
-      endpoint: '',
-      model: '',
+      endpoint: DEFAULT_AI_ENDPOINT,
+      model: DEFAULT_AI_MODEL,
       apiKey: '',
+    },
+    defaults: {
+      endpoint: DEFAULT_AI_ENDPOINT,
+      model: DEFAULT_AI_MODEL,
     },
     showKey: false,
   },
@@ -21,6 +33,13 @@ Page({
 
   toggleKey() {
     this.setData({ showKey: !this.data.showKey })
+  },
+
+  useTokenPlanDefaults() {
+    this.setData({
+      'settings.endpoint': DEFAULT_AI_ENDPOINT,
+      'settings.model': DEFAULT_AI_MODEL,
+    })
   },
 
   saveSettings() {

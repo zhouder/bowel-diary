@@ -8,10 +8,10 @@
     "pages/settings/settings"
   ],
   "window": {
-    "navigationBarTitleText": "LLW 便便日记",
-    "navigationBarBackgroundColor": "#4f9a78",
+    "navigationBarTitleText": "LLW Rhythm",
+    "navigationBarBackgroundColor": "#0F1512",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#f8f5ef",
+    "backgroundColor": "#F5F7F5",
     "backgroundTextStyle": "dark"
   },
   "style": "v2",

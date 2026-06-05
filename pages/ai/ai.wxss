@@ -1,5 +1,35 @@
+.ai-page {
+  padding-top: 24rpx;
+}
+
 .ai-hero {
-  background: linear-gradient(135deg, #fffdf8 0%, #e5edf6 100%);
+  margin-bottom: 22rpx;
+  padding: 34rpx 32rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(135deg, #101412 0%, #173d5f 100%);
+  color: #ffffff;
+  box-shadow: 0 24rpx 60rpx rgba(23, 61, 95, 0.2);
+}
+
+.ai-kicker {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 21rpx;
+  font-weight: 850;
+}
+
+.ai-title {
+  margin-top: 12rpx;
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.ai-subtitle {
+  margin-top: 12rpx;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 27rpx;
+  line-height: 1.45;
 }
 
 .context-row {
@@ -14,11 +44,11 @@
   display: flex;
   align-items: center;
   padding: 0 20rpx;
-  border-radius: 14rpx;
-  background: #e5edf6;
-  color: #426f9f;
-  font-size: 26rpx;
-  font-weight: 800;
+  border-radius: 999rpx;
+  background: #eef4ff;
+  color: #315ccf;
+  font-size: 25rpx;
+  font-weight: 850;
 }
 
 .setting-btn {
@@ -26,24 +56,24 @@
 }
 
 .error-box {
-  margin-top: 20rpx;
+  margin-top: 22rpx;
   padding: 22rpx;
-  border: 1rpx solid rgba(185, 74, 74, 0.28);
-  border-radius: 14rpx;
-  background: #fae7e7;
-  color: #b94a4a;
-  font-size: 28rpx;
+  border: 1rpx solid rgba(206, 82, 72, 0.2);
+  border-radius: 16rpx;
+  background: #fff1ef;
+  color: #c7443a;
+  font-size: 27rpx;
   line-height: 1.7;
 }
 
 .answer-box {
   margin-top: 22rpx;
-  padding: 24rpx;
-  border: 1rpx solid #ded8cd;
-  border-radius: 14rpx;
+  padding: 26rpx;
+  border: 1rpx solid rgba(16, 20, 18, 0.08);
+  border-radius: 16rpx;
   background: #ffffff;
-  color: #22211f;
+  color: #101412;
   font-size: 29rpx;
-  line-height: 1.8;
+  line-height: 1.82;
   white-space: pre-wrap;
 }

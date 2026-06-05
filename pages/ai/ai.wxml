@@ -1,8 +1,8 @@
-<view class="page">
-  <view class="section ai-hero">
-    <text class="eyebrow">AI PLAN</text>
-    <view class="title">饮食建议</view>
-    <view class="muted">根据最近 21 天排便和饮食记录生成建议。</view>
+<view class="page ai-page">
+  <view class="ai-hero">
+    <text class="ai-kicker">XIAOMI MIMO</text>
+    <view class="ai-title">饮食建议</view>
+    <view class="ai-subtitle">Token Plan · mimo-v2.5</view>
   </view>
 
   <view class="section">
@@ -22,7 +22,7 @@
     </view>
 
     <view wx:if="{{!answer && !error}}" class="empty">
-      AI 会重点看饮水、纤维、蔬果、油炸辛辣、咖啡因、乳制品、排便间隔和 Bristol 形态。
+      等待记录数据。
     </view>
   </view>
 

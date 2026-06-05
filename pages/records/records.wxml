@@ -1,7 +1,7 @@
-<view class="page">
-  <view class="section head-section">
-    <text class="eyebrow">LOGS</text>
-    <view class="title">记录列表</view>
+<view class="page records-page">
+  <view class="records-hero">
+    <text class="records-kicker">TIMELINE</text>
+    <view class="records-title">记录列表</view>
     <view class="segmented">
       <button class="seg {{active === 'bowels' ? 'active' : ''}}" data-tab="bowels" bindtap="switchTab">排便</button>
       <button class="seg {{active === 'meals' ? 'active' : ''}}" data-tab="meals" bindtap="switchTab">饮食</button>

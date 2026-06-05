@@ -1,61 +1,65 @@
-<view class="page">
+<view class="page dashboard-page">
   <view class="hero">
-    <view>
-      <text class="eyebrow">LLW CARE LOG</text>
-      <view class="title">饮食和排便记录</view>
-      <view class="muted">本地记录，AI 只在你点击生成时读取最近数据。</view>
+    <view class="hero-top">
+      <view>
+        <text class="hero-kicker">LLW RHYTHM</text>
+        <view class="hero-title">轻盈日程</view>
+        <view class="hero-subtitle">饮食、排便与身体节律</view>
+      </view>
+      <view class="hero-orbit">
+        <view class="orbit-value">{{stats.last7BowelCount}}</view>
+        <view class="orbit-label">7D</view>
+      </view>
     </view>
     <view class="hero-actions">
       <button class="primary-btn" bindtap="goAddBowel">记排便</button>
-      <button class="secondary-btn" bindtap="goAddMeal">记饮食</button>
+      <button class="ghost-btn" bindtap="goAddMeal">记饮食</button>
     </view>
   </view>
 
   <view class="stats-grid">
-    <view class="stat-card">
-      <text class="muted">上次排便</text>
+    <view class="stat-card accent-green">
+      <text class="stat-label">上次排便</text>
       <view class="stat-value">{{stats.daysSinceLastText}}</view>
-      <text class="muted">{{stats.lastBowelText}}</text>
+      <text class="stat-foot">{{stats.lastBowelText}}</text>
     </view>
-    <view class="stat-card">
-      <text class="muted">7 天次数</text>
+    <view class="stat-card accent-blue">
+      <text class="stat-label">7 天次数</text>
       <view class="stat-value">{{stats.last7BowelCount}} 次</view>
-      <text class="muted">每周节律</text>
+      <text class="stat-foot">每周节律</text>
     </view>
-    <view class="stat-card">
-      <text class="muted">14 天形态</text>
+    <view class="stat-card accent-coral">
+      <text class="stat-label">14 天形态</text>
       <view class="stat-value">{{stats.avgBristolText}}</view>
-      <text class="muted">偏硬占比 {{stats.hardRateText}}</text>
+      <text class="stat-foot">偏硬 {{stats.hardRateText}}</text>
     </view>
-    <view class="stat-card">
-      <text class="muted">日均饮水</text>
+    <view class="stat-card accent-ink">
+      <text class="stat-label">日均饮水</text>
       <view class="stat-value">{{stats.avgWaterText}}</view>
-      <text class="muted">日均纤维 {{stats.avgFiberText}}</text>
+      <text class="stat-foot">纤维 {{stats.avgFiberText}}</text>
     </view>
   </view>
 
-  <view class="section">
+  <view class="section rhythm-section">
     <view class="section-head">
       <view>
-        <text class="eyebrow">7 DAYS</text>
-        <view class="section-title">本周节律</view>
+        <text class="eyebrow">SEVEN DAYS</text>
+        <view class="section-title">节律视图</view>
       </view>
       <button class="mini-btn" bindtap="goRecords">全部</button>
     </view>
 
-    <scroll-view class="rhythm-scroll" scroll-x>
-      <view class="rhythm-row">
-        <view class="rhythm-day" wx:for="{{stats.dailyRows}}" wx:key="key">
-          <view class="day-label">{{item.label}}</view>
-          <view class="bar-track">
-            <view class="bar bowel" style="height: {{item.bowelHeight}}%;"></view>
-            <view class="bar water" style="height: {{item.waterHeight}}%;"></view>
-            <view class="bar fiber" style="height: {{item.fiberHeight}}%;"></view>
-          </view>
-          <view class="muted">{{item.bowelCount}} 次</view>
+    <view class="rhythm-row">
+      <view class="rhythm-day" wx:for="{{stats.dailyRows}}" wx:key="key">
+        <view class="day-label">{{item.label}}</view>
+        <view class="bar-track">
+          <view class="bar bowel" style="height: {{item.bowelHeight}}%;"></view>
+          <view class="bar water" style="height: {{item.waterHeight}}%;"></view>
+          <view class="bar fiber" style="height: {{item.fiberHeight}}%;"></view>
         </view>
+        <view class="day-count">{{item.bowelCount}}</view>
       </view>
-    </scroll-view>
+    </view>
   </view>
 
   <view class="section">
@@ -83,7 +87,7 @@
     <view class="section-head">
       <view>
         <text class="eyebrow">TOOLS</text>
-        <view class="section-title">常用</view>
+        <view class="section-title">快速入口</view>
       </view>
     </view>
     <view class="tool-grid">

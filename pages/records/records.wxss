@@ -1,52 +1,74 @@
-.head-section {
-  background: linear-gradient(135deg, #fffdf8 0%, #e4f2eb 100%);
+.records-page {
+  padding-top: 24rpx;
+}
+
+.records-hero {
+  margin-bottom: 22rpx;
+  padding: 32rpx;
+  border-radius: 20rpx;
+  background: #101412;
+  color: #ffffff;
+  box-shadow: 0 24rpx 60rpx rgba(16, 20, 18, 0.18);
+}
+
+.records-kicker {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 21rpx;
+  font-weight: 850;
+}
+
+.records-title {
+  margin-top: 12rpx;
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: 900;
+  line-height: 1.08;
 }
 
 .segmented {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12rpx;
-  margin-top: 24rpx;
+  gap: 10rpx;
+  margin-top: 28rpx;
   padding: 8rpx;
-  border-radius: 16rpx;
-  background: #f3efe7;
+  border-radius: 18rpx;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .seg {
-  min-height: 70rpx;
+  min-height: 72rpx;
   background: transparent;
-  color: #6e6a61;
-  font-weight: 800;
+  color: rgba(255, 255, 255, 0.62);
+  font-weight: 850;
 }
 
 .seg.active {
   background: #ffffff;
-  color: #22211f;
-  box-shadow: 0 8rpx 20rpx rgba(61, 52, 38, 0.08);
+  color: #101412;
 }
 
 .section-line {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16rpx;
+  gap: 18rpx;
   margin-bottom: 18rpx;
 }
 
 .mini-btn {
-  min-width: 112rpx;
-  min-height: 60rpx;
-  padding: 0 18rpx;
-  border: 1rpx solid #ded8cd;
+  width: 128rpx;
+  min-height: 62rpx;
+  flex: 0 0 128rpx;
+  border: 1rpx solid rgba(16, 20, 18, 0.1);
   background: #ffffff;
-  color: #22211f;
-  font-size: 26rpx;
-  font-weight: 750;
+  color: #101412;
+  font-size: 25rpx;
+  font-weight: 820;
 }
 
 .record-card {
-  padding: 22rpx 0;
-  border-bottom: 1rpx solid #eee8dc;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid rgba(16, 20, 18, 0.07);
 }
 
 .record-card:last-child {
@@ -62,23 +84,24 @@
 }
 
 .record-title {
-  color: #111111;
+  color: #101412;
   font-size: 31rpx;
-  font-weight: 820;
+  font-weight: 860;
 }
 
 .record-note {
-  color: #3f3728;
-  font-size: 28rpx;
+  color: #3f4842;
+  font-size: 27rpx;
   line-height: 1.65;
 }
 
 .delete-btn {
   width: 66rpx;
   height: 58rpx;
-  border: 1rpx solid rgba(185, 74, 74, 0.24);
-  background: #fae6df;
-  color: #b94a4a;
+  flex: 0 0 66rpx;
+  border: 1rpx solid rgba(206, 82, 72, 0.2);
+  background: #fff1ef;
+  color: #c7443a;
   font-size: 24rpx;
-  font-weight: 800;
+  font-weight: 850;
 }

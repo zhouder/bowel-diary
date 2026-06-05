@@ -1,24 +1,30 @@
-<view class="page">
-  <view class="section settings-hero">
-    <text class="eyebrow">SETTINGS</text>
-    <view class="title">设置</view>
-    <view class="muted">API Key 只保存在当前微信小程序本地。</view>
+<view class="page settings-page">
+  <view class="settings-hero">
+    <text class="settings-kicker">XIAOMI MIMO</text>
+    <view class="settings-title">Token Plan</view>
+    <view class="settings-subtitle">OpenAI-compatible · China endpoint</view>
   </view>
 
   <view class="section">
-    <view class="section-title">AI 接口</view>
+    <view class="section-line">
+      <view>
+        <text class="eyebrow">API</text>
+        <view class="section-title">AI 接口</view>
+      </view>
+      <button class="mini-btn" bindtap="useTokenPlanDefaults">默认</button>
+    </view>
     <view class="field first-field">
-      <text class="label">API 地址</text>
-      <input class="input" value="{{settings.endpoint}}" data-key="endpoint" placeholder="https://api.example.com/v1" bindinput="onInput" />
+      <text class="label">Base URL</text>
+      <input class="input" value="{{settings.endpoint}}" data-key="endpoint" placeholder="{{defaults.endpoint}}" bindinput="onInput" />
     </view>
     <view class="field">
       <text class="label">模型</text>
-      <input class="input" value="{{settings.model}}" data-key="model" placeholder="model-name" bindinput="onInput" />
+      <input class="input" value="{{settings.model}}" data-key="model" placeholder="{{defaults.model}}" bindinput="onInput" />
     </view>
     <view class="field">
       <text class="label">API Key</text>
       <view class="secret-row">
-        <input class="input" password="{{!showKey}}" value="{{settings.apiKey}}" data-key="apiKey" placeholder="sk-..." bindinput="onInput" />
+        <input class="input" password="{{!showKey}}" value="{{settings.apiKey}}" data-key="apiKey" placeholder="tp-..." bindinput="onInput" />
         <button class="secondary-btn eye-btn" bindtap="toggleKey">{{showKey ? '藏' : '看'}}</button>
       </view>
     </view>

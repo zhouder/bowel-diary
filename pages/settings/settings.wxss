@@ -1,19 +1,75 @@
+.settings-page {
+  padding-top: 24rpx;
+}
+
 .settings-hero {
-  background: linear-gradient(135deg, #fffdf8 0%, #e4f2eb 100%);
+  margin-bottom: 22rpx;
+  padding: 34rpx 32rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(135deg, #101412 0%, #1d604b 100%);
+  color: #ffffff;
+  box-shadow: 0 24rpx 60rpx rgba(29, 96, 75, 0.2);
+}
+
+.settings-kicker {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 21rpx;
+  font-weight: 850;
+}
+
+.settings-title {
+  margin-top: 12rpx;
+  color: #ffffff;
+  font-size: 50rpx;
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.settings-subtitle {
+  margin-top: 12rpx;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 27rpx;
+  line-height: 1.45;
+}
+
+.section-line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18rpx;
+}
+
+.mini-btn {
+  width: 128rpx;
+  min-height: 62rpx;
+  flex: 0 0 128rpx;
+  border: 1rpx solid rgba(16, 20, 18, 0.1);
+  background: #ffffff;
+  color: #101412;
+  font-size: 25rpx;
+  font-weight: 820;
 }
 
 .first-field {
-  margin-top: 22rpx;
+  margin-top: 24rpx;
 }
 
 .secret-row {
-  display: grid;
-  grid-template-columns: 1fr 96rpx;
+  display: flex;
+  align-items: stretch;
   gap: 12rpx;
 }
 
+.secret-row .input {
+  flex: 1 1 0;
+  width: 0;
+  min-width: 0;
+}
+
 .eye-btn {
-  min-height: 84rpx;
+  width: 96rpx;
+  min-height: 86rpx;
+  flex: 0 0 96rpx;
   padding: 0;
 }
 
