@@ -28,8 +28,12 @@ const mealOptions = [
 ]
 
 function findLabel(options, value) {
-  const item = options.find((option) => option.value === value)
-  return item ? item.label : String(value || '')
+  for (let index = 0; index < options.length; index += 1) {
+    if (options[index].value === value) {
+      return options[index].label
+    }
+  }
+  return String(value || '')
 }
 
 function bristolLabel(value) {
@@ -107,7 +111,8 @@ function buildStats(data) {
   const avgWater = last7Meals.reduce((sum, entry) => sum + Number(entry.waterMl || 0), 0) / 7
   const avgFiber = last7Meals.reduce((sum, entry) => sum + Number(entry.fiberGram || 0), 0) / 7
 
-  const dailyRows = Array.from({ length: 7 }, (_, index) => {
+  const dailyRows = []
+  for (let index = 0; index < 7; index += 1) {
     const date = daysAgo(6 - index)
     const key = dateKey(date)
     const bowelCount = data.bowelEntries.filter((entry) => dateKey(entry.occurredAt) === key).length
@@ -115,7 +120,7 @@ function buildStats(data) {
     const water = meals.reduce((sum, entry) => sum + Number(entry.waterMl || 0), 0)
     const fiber = meals.reduce((sum, entry) => sum + Number(entry.fiberGram || 0), 0)
 
-    return {
+    dailyRows.push({
       key,
       label: formatDateLabel(date),
       bowelCount,
@@ -124,8 +129,8 @@ function buildStats(data) {
       bowelHeight: Math.min(92, 16 + bowelCount * 26),
       waterHeight: Math.min(92, 12 + water / 28),
       fiberHeight: Math.min(92, 12 + fiber * 3),
-    }
-  })
+    })
+  }
 
   return {
     daysSinceLastText: daysSinceLast === null ? '暂无' : `${daysSinceLast} 天前`,
