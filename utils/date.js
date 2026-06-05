@@ -1,5 +1,6 @@
 function pad(value) {
-  return String(value).padStart(2, '0')
+  const text = String(value)
+  return text.length >= 2 ? text : `0${text}`
 }
 
 function partsFromDate(date) {
