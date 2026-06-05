@@ -60,6 +60,6 @@
       <textarea class="textarea small" value="{{form.notes}}" placeholder="比如吃得晚、压力大、运动少" bindinput="onNotesInput" />
     </view>
 
-    <button class="primary-btn save-btn" bindtap="save">保存饮食</button>
+    <view class="primary-btn save-btn" bindtap="save">保存饮食</view>
   </view>
 </view>

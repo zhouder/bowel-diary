@@ -1,6 +1,7 @@
 const STORAGE_KEY = 'llw_bowel_diary_v1'
 const DEFAULT_AI_ENDPOINT = 'https://token-plan-cn.xiaomimimo.com/v1'
 const DEFAULT_AI_MODEL = 'mimo-v2.5'
+const DEFAULT_AI_API_KEY = ''
 
 const defaultData = {
   bowelEntries: [],
@@ -8,7 +9,7 @@ const defaultData = {
   settings: {
     endpoint: DEFAULT_AI_ENDPOINT,
     model: DEFAULT_AI_MODEL,
-    apiKey: '',
+    apiKey: DEFAULT_AI_API_KEY,
   },
 }
 
@@ -23,7 +24,7 @@ function normalizeData(value) {
     settings: {
       endpoint: value.settings && value.settings.endpoint ? value.settings.endpoint : DEFAULT_AI_ENDPOINT,
       model: value.settings && value.settings.model ? value.settings.model : DEFAULT_AI_MODEL,
-      apiKey: value.settings && value.settings.apiKey ? value.settings.apiKey : '',
+      apiKey: value.settings && value.settings.apiKey ? value.settings.apiKey : DEFAULT_AI_API_KEY,
     },
   }
 }
@@ -64,6 +65,7 @@ function exportDataWithoutKey() {
 
 module.exports = {
   DEFAULT_AI_ENDPOINT,
+  DEFAULT_AI_API_KEY,
   DEFAULT_AI_MODEL,
   exportDataWithoutKey,
   loadData,

@@ -1,6 +1,6 @@
 <view class="page settings-page">
   <view class="settings-hero">
-    <text class="settings-kicker">XIAOMI MIMO</text>
+    <text class="settings-kicker">Xiaomi MiMo</text>
     <view class="settings-title">Token Plan</view>
     <view class="settings-subtitle">OpenAI-compatible · China endpoint</view>
   </view>
@@ -11,7 +11,7 @@
         <text class="eyebrow">API</text>
         <view class="section-title">AI 接口</view>
       </view>
-      <button class="mini-btn" bindtap="useTokenPlanDefaults">默认</button>
+      <view class="mini-btn" bindtap="useTokenPlanDefaults">默认</view>
     </view>
     <view class="field first-field">
       <text class="label">Base URL</text>
@@ -25,18 +25,18 @@
       <text class="label">API Key</text>
       <view class="secret-row">
         <input class="input" password="{{!showKey}}" value="{{settings.apiKey}}" data-key="apiKey" placeholder="tp-..." bindinput="onInput" />
-        <button class="secondary-btn eye-btn" bindtap="toggleKey">{{showKey ? '藏' : '看'}}</button>
+        <view class="secondary-btn eye-btn" bindtap="toggleKey">{{showKey ? '藏' : '看'}}</view>
       </view>
     </view>
-    <button class="primary-btn" bindtap="saveSettings">保存设置</button>
+    <view class="primary-btn" bindtap="saveSettings">保存设置</view>
   </view>
 
   <view class="section">
     <view class="section-title">数据</view>
     <view class="data-actions">
-      <button class="secondary-btn" bindtap="copyBackup">复制备份 JSON</button>
-      <button class="secondary-btn" bindtap="importFromClipboard">从剪贴板导入</button>
-      <button class="danger-btn" bindtap="clearRecords">清空记录</button>
+      <view class="secondary-btn" bindtap="copyBackup">复制备份 JSON</view>
+      <view class="secondary-btn" bindtap="importFromClipboard">从剪贴板导入</view>
+      <view class="danger-btn" bindtap="clearRecords">清空记录</view>
     </view>
   </view>
 

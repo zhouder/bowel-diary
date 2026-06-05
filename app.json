@@ -9,9 +9,9 @@
   ],
   "window": {
     "navigationBarTitleText": "LLW Rhythm",
-    "navigationBarBackgroundColor": "#0F1512",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#F5F7F5",
+    "navigationBarBackgroundColor": "#F5F5F7",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F5F7",
     "backgroundTextStyle": "dark"
   },
   "style": "v2",

@@ -10,7 +10,7 @@
 - 记录列表：查看和删除排便/饮食记录。
 - AI 建议：调用 OpenAI 兼容的 `/chat/completions` 接口，基于最近 21 天记录输出中文建议。
 - 数据备份：复制备份 JSON、从剪贴板导入。备份不会包含 API Key。
-- 高级感 UI：以深色品牌顶区、干净卡片、对齐的数据网格和轻量色彩系统呈现。
+- Apple 风格 UI：浅色 grouped background、大标题、圆角卡片、固定高度按钮和 iOS 式列表。
 
 ## 使用方式
 
@@ -35,6 +35,8 @@
 - API 地址：`https://token-plan-cn.xiaomimimo.com/v1`
 - 默认模型：`mimo-v2.5`
 - API Key：在小米 Token Plan 页面复制，通常以 `tp-` 开头
+
+代码里预留了 `utils/storage.js` 的 `DEFAULT_AI_API_KEY`。本地调试时可以临时填入完整 Key，让设置页默认带上；公开仓库或正式提交前不要把真实 Key 提交上去，否则别人可以直接使用你的额度。
 
 接口按 OpenAI 兼容格式请求：
 

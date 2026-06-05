@@ -34,6 +34,8 @@ Page({
   },
 
   generate() {
+    if (this.data.loading) return
+
     const data = loadData()
     this.setData({ loading: true, answer: '', error: '' })
     wx.showLoading({ title: '生成中' })

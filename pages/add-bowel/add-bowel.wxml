@@ -55,6 +55,6 @@
       <textarea class="textarea" value="{{form.notes}}" placeholder="比如早起、饭后、外出、压力等" bindinput="onNotesInput" />
     </view>
 
-    <button class="primary-btn save-btn" bindtap="save">保存排便</button>
+    <view class="primary-btn save-btn" bindtap="save">保存排便</view>
   </view>
 </view>

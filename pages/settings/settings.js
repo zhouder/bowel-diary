@@ -1,4 +1,5 @@
 const {
+  DEFAULT_AI_API_KEY,
   DEFAULT_AI_ENDPOINT,
   DEFAULT_AI_MODEL,
   exportDataWithoutKey,
@@ -13,7 +14,7 @@ Page({
     settings: {
       endpoint: DEFAULT_AI_ENDPOINT,
       model: DEFAULT_AI_MODEL,
-      apiKey: '',
+      apiKey: DEFAULT_AI_API_KEY,
     },
     defaults: {
       endpoint: DEFAULT_AI_ENDPOINT,

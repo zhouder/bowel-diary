@@ -1,17 +1,17 @@
 <view class="page records-page">
   <view class="records-hero">
-    <text class="records-kicker">TIMELINE</text>
+    <text class="records-kicker">Timeline</text>
     <view class="records-title">记录列表</view>
     <view class="segmented">
-      <button class="seg {{active === 'bowels' ? 'active' : ''}}" data-tab="bowels" bindtap="switchTab">排便</button>
-      <button class="seg {{active === 'meals' ? 'active' : ''}}" data-tab="meals" bindtap="switchTab">饮食</button>
+      <view class="seg {{active === 'bowels' ? 'active' : ''}}" data-tab="bowels" bindtap="switchTab">排便</view>
+      <view class="seg {{active === 'meals' ? 'active' : ''}}" data-tab="meals" bindtap="switchTab">饮食</view>
     </view>
   </view>
 
   <view wx:if="{{active === 'bowels'}}" class="section">
     <view class="section-line">
       <view class="section-title">排便记录</view>
-      <button class="mini-btn" bindtap="addBowel">新增</button>
+      <view class="mini-btn" bindtap="addBowel">新增</view>
     </view>
     <view wx:if="{{bowels.length}}">
       <view class="record-card" wx:for="{{bowels}}" wx:key="id">
@@ -20,7 +20,7 @@
             <view class="record-title">{{item.bristolText}}</view>
             <view class="muted">{{item.timeText}} · {{item.minutes}} 分钟 · 顺畅度 {{item.ease}}</view>
           </view>
-          <button class="delete-btn" data-id="{{item.id}}" bindtap="removeBowel">删</button>
+          <view class="delete-btn" data-id="{{item.id}}" bindtap="removeBowel">删</view>
         </view>
         <view class="record-note">{{item.detailText}}</view>
       </view>
@@ -31,7 +31,7 @@
   <view wx:if="{{active === 'meals'}}" class="section">
     <view class="section-line">
       <view class="section-title">饮食记录</view>
-      <button class="mini-btn" bindtap="addMeal">新增</button>
+      <view class="mini-btn" bindtap="addMeal">新增</view>
     </view>
     <view wx:if="{{meals.length}}">
       <view class="record-card" wx:for="{{meals}}" wx:key="id">
@@ -40,7 +40,7 @@
             <view class="record-title">{{item.mealText}}</view>
             <view class="muted">{{item.timeText}} · 水 {{item.waterMl}} ml · 纤维 {{item.fiberGram}} g</view>
           </view>
-          <button class="delete-btn" data-id="{{item.id}}" bindtap="removeMeal">删</button>
+          <view class="delete-btn" data-id="{{item.id}}" bindtap="removeMeal">删</view>
         </view>
         <view class="record-note">{{item.detailText}}</view>
       </view>

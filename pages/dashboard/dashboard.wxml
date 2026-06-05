@@ -2,8 +2,8 @@
   <view class="hero">
     <view class="hero-top">
       <view>
-        <text class="hero-kicker">LLW RHYTHM</text>
-        <view class="hero-title">轻盈日程</view>
+        <text class="hero-kicker">LLW Rhythm</text>
+        <view class="hero-title">今天</view>
         <view class="hero-subtitle">饮食、排便与身体节律</view>
       </view>
       <view class="hero-orbit">
@@ -12,8 +12,8 @@
       </view>
     </view>
     <view class="hero-actions">
-      <button class="primary-btn" bindtap="goAddBowel">记排便</button>
-      <button class="ghost-btn" bindtap="goAddMeal">记饮食</button>
+      <view class="primary-btn" bindtap="goAddBowel">记排便</view>
+      <view class="secondary-btn" bindtap="goAddMeal">记饮食</view>
     </view>
   </view>
 
@@ -46,7 +46,7 @@
         <text class="eyebrow">SEVEN DAYS</text>
         <view class="section-title">节律视图</view>
       </view>
-      <button class="mini-btn" bindtap="goRecords">全部</button>
+      <view class="mini-btn" bindtap="goRecords">全部</view>
     </view>
 
     <view class="rhythm-row">
@@ -68,7 +68,7 @@
         <text class="eyebrow">RECENT</text>
         <view class="section-title">最近排便</view>
       </view>
-      <button class="mini-btn" bindtap="goAi">AI</button>
+      <view class="mini-btn" bindtap="goAi">AI</view>
     </view>
 
     <view wx:if="{{stats.recentBowels.length}}">
@@ -90,10 +90,28 @@
         <view class="section-title">快速入口</view>
       </view>
     </view>
-    <view class="tool-grid">
-      <button class="secondary-btn" bindtap="goRecords">记录列表</button>
-      <button class="secondary-btn" bindtap="goAi">AI 建议</button>
-      <button class="secondary-btn" bindtap="goSettings">设置</button>
+    <view class="tool-list">
+      <view class="tool-row" bindtap="goRecords">
+        <view>
+          <view class="tool-title">记录列表</view>
+          <view class="muted">查看排便和饮食时间线</view>
+        </view>
+        <text class="chevron">›</text>
+      </view>
+      <view class="tool-row" bindtap="goAi">
+        <view>
+          <view class="tool-title">AI 建议</view>
+          <view class="muted">基于最近 21 天记录生成</view>
+        </view>
+        <text class="chevron">›</text>
+      </view>
+      <view class="tool-row" bindtap="goSettings">
+        <view>
+          <view class="tool-title">设置</view>
+          <view class="muted">小米 Token Plan 和备份</view>
+        </view>
+        <text class="chevron">›</text>
+      </view>
     </view>
   </view>
 

@@ -1,6 +1,6 @@
 <view class="page ai-page">
   <view class="ai-hero">
-    <text class="ai-kicker">XIAOMI MIMO</text>
+    <text class="ai-kicker">Xiaomi MiMo</text>
     <view class="ai-title">饮食建议</view>
     <view class="ai-subtitle">Token Plan · mimo-v2.5</view>
   </view>
@@ -12,8 +12,8 @@
       <view class="context-pill">近 21 天</view>
     </view>
 
-    <button class="primary-btn" disabled="{{loading}}" bindtap="generate">{{loading ? '生成中' : '生成建议'}}</button>
-    <button wx:if="{{!hasSettings}}" class="secondary-btn setting-btn" bindtap="goSettings">先去设置 API</button>
+    <view class="primary-btn {{loading ? 'disabled' : ''}}" bindtap="generate">{{loading ? '生成中' : '生成建议'}}</view>
+    <view wx:if="{{!hasSettings}}" class="secondary-btn setting-btn" bindtap="goSettings">先去设置 API</view>
 
     <view wx:if="{{error}}" class="error-box">{{error}}</view>
 
