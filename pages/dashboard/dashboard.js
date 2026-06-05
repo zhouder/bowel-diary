@@ -1,9 +1,24 @@
 const { loadData } = require('../../utils/storage')
 const { buildStats } = require('../../utils/stats')
 
+function fallbackStats() {
+  return {
+    daysSinceLastText: '暂无',
+    lastBowelText: '还没有记录',
+    last7BowelCount: 0,
+    avgBristolText: '暂无',
+    hardRateText: '0%',
+    avgWaterText: '0 ml',
+    avgFiberText: '0.0 g',
+    dailyRows: [],
+    recentBowels: [],
+    recentMeals: [],
+  }
+}
+
 Page({
   data: {
-    stats: buildStats(loadData()),
+    stats: fallbackStats(),
   },
 
   onShow() {
@@ -11,9 +26,16 @@ Page({
   },
 
   refresh() {
-    this.setData({
-      stats: buildStats(loadData()),
-    })
+    try {
+      this.setData({
+        stats: buildStats(loadData()),
+      })
+    } catch (error) {
+      console.error('refresh dashboard failed', error)
+      this.setData({
+        stats: fallbackStats(),
+      })
+    }
   },
 
   goAddBowel() {
