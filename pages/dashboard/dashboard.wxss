@@ -7,10 +7,14 @@
 }
 
 .hero-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 16rpx;
   margin-top: 28rpx;
+}
+
+.hero-actions button {
+  flex: 1 1 0;
+  width: 0;
 }
 
 .stats-grid {
